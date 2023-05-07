@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #message-history {
+            border: 1px solid #ccc;
+            height: 300px;
+            margin-bottom: 20px;
+            overflow-y: scroll;
+            padding: 10px;
+            width: 100%;
+        }
+        #messages {
+            display: flex;
+            flex-direction: column;
+        }
+        .message {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h1>AutoGPT Message Broker</h1>
+    <div> 
+        <label for="channel">Channel:</label>
+        <input type="text" id="channel">
+        <button id="subscribe">Subscribe</button>
+    </div>
+    <div>
+        <label for="message">Message:</label>
+        <input type="text" id="message">
+        <button id="publish">Publish</button>
+    </div>
+    <div>
+        <button id="fetch-messages">Fetch Messages</button>
+    </div>
+    <div id="message-history">
+        <div id="messages"></div>
+    </div>
+    <button id="publish-command" class="btn btn-primary">Publish Command</button>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
